@@ -3,3 +3,69 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: #F5F6FA;
+}
+
+.container {
+    margin: 0 5rem;
+}
+/* <!-- UPLOAD BOARD --> */
+
+.container-upload{
+    margin-top: 2rem;
+    width: 80%; 
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.upload-top{
+    display: flex;
+    margin-top: 1.8rem;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    align-items: center;
+
+}
+img{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+ }
+
+
+.upload-bottom{
+    width: 100%;
+    display: inline-flex;
+    border-top: 2px solid #F5F6FA;
+    margin: 1,8rem;
+    height: 4.5rem;
+    background-color: #fff;
+}
+
+input{
+    padding: 1rem;
+    margin: 1rem;
+    width: 80%;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    
+}
+.container-upload h3{
+    color: rgb(54, 54, 206);
+    padding: 1rem;
+    font-size: 1.4rem
+   
+ } 
+ .upload-bottom h2{
+    color: rgb(54, 54, 206);
+    align-items: end;
+    margin: auto;
+    justify-content: end; 
+    font-size: 1.1rem;
+ }
+ 
