@@ -294,3 +294,58 @@ input{
  }
  
 
+/* COMMENT BOARD */
+.comments-container{
+    padding: .5rem;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+}
+.card{
+    display: flex;
+    border-radius: 18px;
+    width: 32%;
+    padding: .4rem 0;
+    align-items: center;
+    background-color: #fff;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+}
+
+.user-bild{
+    background-image: url("/images/profile/001-viking.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+   
+}
+
+.comments-text p{
+    color: #a3a3a3;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .comments-container{
+        flex-direction: column;
+        height: auto; 
+    }
+    .card{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 905px){
+    .card{
+        width: 45%;
+    }
+
+}
