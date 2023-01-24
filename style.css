@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -41,6 +43,7 @@ ul {
     transition: .3s all;
     font-weight: 450;
     font-size: 1.2rem;
+    font-family: poppins;
     color: #A6A6A6;
 }
 
@@ -51,10 +54,11 @@ ul {
     cursor: pointer;
     transition: .3s all;
     border: 1px solid #007AFF;
+    margin-right: 2rem;
 }
 
-.contact-us p {
-    color: #fff;
+.contact-us a {
+    color:black;
     font-weight: 400;
     font-size: 1.2rem;
 }
@@ -64,8 +68,18 @@ ul {
     border: 1px solid #007AFF;
 }
 
-.contact-us:hover p {
-    color: #007AFF;
+.contact-us:hover a {
+    color: #007AFF !important;
+}
+.container{
+    margin: 1.8rem 1.8rem;
+}
+
+.profilbild{
+    border-radius: 5rem;
+    width: 40px;
+    margin-top: 8px;
+    cursor: pointer;
 }
 
 
