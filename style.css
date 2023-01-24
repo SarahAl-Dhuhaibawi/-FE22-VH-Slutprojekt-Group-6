@@ -89,3 +89,10 @@ ul {
 
 
 /* COMMENT BOARD */
+.comments-container{
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+}
