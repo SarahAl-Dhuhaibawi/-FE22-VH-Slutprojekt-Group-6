@@ -82,16 +82,7 @@ ul {
     margin-top: 8px;
     cursor: pointer;
 }
-.wrapper {
-    height: 45vh;
-    width: 100%;
-    background-image: url(/images/backgrounds/bg2.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    justify-content: center;
-    text-align: center;
-}
+
 .about-del-top {
     position: relative;
     display: flex;
