@@ -302,6 +302,8 @@ input{
     flex-wrap: wrap;
     gap: 1rem;
     margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 90%;
     justify-content: space-between;
 }
@@ -341,6 +343,12 @@ input{
     .card{
         width: 100%;
     }
+
+    footer{
+        flex-direction: column;
+        padding: 4rem 0;
+    }
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 905px){
@@ -348,4 +356,17 @@ input{
         width: 45%;
     }
 
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    }
+
+    footer{
+        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    }
+    .copyright p{
+        color: #fff;
+    }
 }
