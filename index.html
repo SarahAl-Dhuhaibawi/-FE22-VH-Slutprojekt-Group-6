@@ -1,60 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./images/favicon/pen-icon.webp"
-    />
-    <link rel="stylesheet" href="style.css" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon/pen-icon.webp">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Viking Comment Board App</title>
   </head>
 
   <body>
     <div class="wrapper">
-      <div class="container">
-        <!-- HEADER NAVBAR -->
-        <nav class="navbar">
-          <a href="./index.html"><img src="./images/icons/logo.svg" /></a>
-          <ul class="link-list">
-            <li class="link-item"><a href="index.html">Home</a></li>
-            <li class="link-item">
-              <a href="./pages/aboutUs/aboutUs.html">About Us</a>
-            </li>
-          </ul>
-          <div class="contact-us">
-            <a href="./pages/contactUs/contactUs.html" style="color: #fff"
-              >Contact Us</a
-            >
-          </div>
-          <ul>
-            <div>
-              <img
-                class="profilbild"
-                src="./images/profile/001-viking.png"
-                alt=""
-              />
-            </div>
-          </ul>
-        </nav>
+        <div class="container">
+            <!-- HEADER NAVBAR -->
+            <nav class="navbar">
+                <a href="./index.html"><img src="./images/icons/logo.svg" /></a>
+                <ul class="link-list">
+                    <li class="link-item"><a href="index.html">Home</a></li>
+                    <li class="link-item"><a href="./pages/aboutUs/aboutUs.html">About Us</a></li>
+                </ul>
+                <div class="contact-us">
+                    <a href="./pages/contactUs/contactUs.html" style="color: #fff">Contact Us</a>
+                </div>
+                <ul>
+                    <div>
+                        <img class="profilbild" src="./images/profile/001-viking.png" alt="">
+                    </div>
+                </ul>
+            </nav>
 
-        <!-- UPLOAD BOARD -->
+                <!-- UPLOAD BOARD -->
 
-        <div class="container-upload">
-          <div class="upload-top">
-            <img src="/images/icons/pen.svg" alt="" />
-            <h3>Update Status</h3>
-          </div>
-          <div class="upload-bottom">
-            <input type="text" placeholder="What's on your mind?" />
-            <h2>POST</h2>
-          </div>
-        </div>
+                <div class="container-upload">
+                <div class="upload-top"> <img src="/images/icons/pen.svg" alt=""> 
+               <h3> Update Status </h3></div>
+            <div class="upload-bottom"> <input type="text" placeholder="What's on your mind?">
+                <h2>POST</h2>
 
-        <!-- COMMENTS BOARD -->
+
+                       
+    </div>
 
         <div class="comments-container">
           <div class="card">
@@ -179,5 +167,39 @@
         </div>
       </div>
     </div>
+    <footer>
+        <ul class="social-icon">
+            <li>
+                <a href="">
+                    <ion-icon name="call-outline"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:....@hotmail.com">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="https://www.google.com/maps/place/Ledebursgatan+5,+211+55+Malmö/@55.5988015,13.0106389,17z/data=!3m1!4b1!4m5!3m4!1s0x4653a159275308af:0xcf60c88a3243e1e2!8m2!3d55.5988015!4d13.0106389">
+                    <ion-icon name="location-outline"></ion-icon>
+                </a>
+            </li>
+        </ul>
+
+        <div class="copyright">
+            <p>© 2023 YC. All rights reserved</p>
+        </div>
+    </footer>
   </body>
 </html>
