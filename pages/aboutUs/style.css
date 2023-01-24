@@ -24,7 +24,7 @@ ul {
 .wrapper {
     height: 45vh;
     width: 100%;
-    background-image: url(/images/backgrounds/bg2.jpg);
+    background-image: url(../../images/backgrounds/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,15 +50,15 @@ ul {
 .about-del-top img {
     width: 30rem;
     border-radius: 10px;
-    
+
 }
 
 h1 {
-    color:#3E3E81;
+    color: #3E3E81;
     font-size: 1.8rem;
     padding-right: 2rem;
     margin-top: 4rem;
-     text-align: center;
+    text-align: center;
 
 }
 
@@ -111,40 +111,39 @@ footer p {
     line-height: 1.5rem;
     margin: auto;
 }
- 
-@media screen and (max-width: 768px){
 
-.about-del-top img {
-    width: 70%;
-}
+@media screen and (max-width: 768px) {
 
-.about-del {
-    flex-direction: column;
-}
-
-footer{
-    flex-direction: column;
-    padding: 4rem 0;
-}
-}
-
-
-
-@media (prefers-color-scheme: dark){
-    body{
-        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    .about-del-top img {
+        width: 70%;
     }
 
-    .about-del p{
+    .about-del {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 4rem 0;
+    }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(rgb(20, 20, 78), rgb(28, 59, 71));
+    }
+
+    .about-del p {
         color: #fff;
     }
 
-    footer{
-        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    footer {
+        background: linear-gradient(rgb(20, 20, 78), rgb(28, 59, 71));
     }
-    .copyright p{
+
+    .copyright p {
         color: #fff;
     }
 }
-
-
