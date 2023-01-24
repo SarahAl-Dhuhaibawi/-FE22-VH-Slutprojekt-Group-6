@@ -6,6 +6,9 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: #F5F6FA;
+}
 
 a {
     text-decoration: none;
@@ -21,7 +24,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 3rem;
+    padding: 1rem 3rem;
+    background: #fff;
 }
 
 .navbar .link-list {
@@ -71,9 +75,6 @@ ul {
 .contact-us:hover a {
     color: #007AFF !important;
 }
-.container{
-    margin: 1.8rem 1.8rem;
-}
 
 .profilbild{
     border-radius: 5rem;
@@ -83,9 +84,62 @@ ul {
 }
 
 
-/* UPLOAD BOARD */
+/* <!-- UPLOAD BOARD --> */
+
+.container-upload{
+    margin-top: 2rem;
+    width: 90%; 
+    align-items: center;
+    margin: auto;
+    border-radius: 10px;
+}
+.upload-top{
+    display: flex;
+    margin-top: 1.8rem;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: white;
+    align-items: center;
+
+}
+.upload-top img{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+ }
 
 
+.upload-bottom{
+    width: 100%;
+    display: inline-flex;
+    border-top: 2px solid #F5F6FA;
+    margin: 1,8rem;
+    height: 4.5rem;
+    background-color: #fff;
+}
 
+input{
+    padding: 1rem;
+    width: 80%;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    
+}
+.upload-top h3{
+    color: rgb(54, 54, 206);
+    font-size: 1.1rem;
+    font-weight: 500;
+   
+ } 
+ .upload-bottom h2{
+    color: rgb(54, 54, 206);
+    align-items: end;
+    cursor: pointer;
+    margin: auto;
+    justify-content: end; 
+    font-size: 1.1rem;
+ }
+ 
 
-/* COMMENT BOARD */
