@@ -259,19 +259,22 @@ footer p {
 
 .upload-bottom{
     width: 100%;
-    display: inline-flex;
+    display: flex;
     border-top: 2px solid #F5F6FA;
     margin: 1,8rem;
     height: 4.5rem;
+    align-items: center;
     background-color: #fff;
 }
 
 input{
     padding: 1rem;
+    padding-left: 3rem !important;
     width: 80%;
     border: none;
     font-size: 1rem;
     outline: none;
+    flex: 1;
     
 }
 .upload-top h3{
@@ -284,9 +287,8 @@ input{
     color: rgb(54, 54, 206);
     align-items: end;
     cursor: pointer;
-    margin: auto;
-    justify-content: end; 
     font-size: 1.1rem;
+    margin-right: 3rem;
  }
  
 
