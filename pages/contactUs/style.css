@@ -116,6 +116,7 @@ h1 {
     display: flex;
     justify-content: center;
     justify-items: center;
+    margin-top: 11rem;
 
 }
 
@@ -217,11 +218,16 @@ footer p {
     line-height: 1.5rem;
     margin: auto;
 }
+
  
 @media screen and (max-width: 768px){
     .contact_list{
         width: 80% !important;
     }
+    .contact-container.show{
+        margin-top: 1rem;
+    }
+
     footer{
         flex-direction: column;
         padding: 4rem 0;
