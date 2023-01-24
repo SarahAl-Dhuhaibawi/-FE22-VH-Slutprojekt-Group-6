@@ -32,12 +32,10 @@ ul {
 }
 
 .about-del-top {
-    position: relative;
     display: flex;
     justify-content: center;
     justify-items: center;
-    margin-top: 15rem;
-    margin-bottom: 12rem;
+    margin: 2rem 0;
 }
 
 .about-del {
@@ -50,84 +48,19 @@ ul {
 }
 
 .about-del-top img {
-    position: absolute;
     width: 30rem;
-    top: -12.5rem;
-    border-radius: 14px;
+    border-radius: 10px;
+    
 }
 
 h1 {
-    color: #fff;
+    color:#3E3E81;
     font-size: 1.8rem;
     padding-right: 2rem;
     margin-top: 4rem;
-}
-
-.message {
-    display: flex;
-}
-
-.input-item {
-    width: 100%;
-}
-
-.contact-container {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+     text-align: center;
 
 }
-
-.contact_list {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem !important;
-    margin-bottom: 3rem;
-    row-gap: 0.8rem;
-
-}
-
-.contact {
-    padding-left: 1rem;
-    width: 100%;
-    padding: .8rem 1rem;
-    border: 0.15rem solid rgb(191, 187, 187);
-    border-radius: 10px;
-    background-color: rgb(234, 231, 231);
-    border: none;
-    outline: none;
-}
-
-.message-input {
-    height: 5rem;
-    padding-top: 1rem;
-}
-
-.btn {
-    width: 8rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .3s all;
-    background-color: #007AFF;
-    align-self: flex-start;
-    padding: 0.8rem 0.3rem;
-    font-size: .8rem;
-    text-align: center;
-    color: #fff;
-}
-
-.btn:hover {
-    background: none;
-    border: 1px solid #007AFF;
-}
-
-.btn:hover a {
-    color: #0c0c0c !important;
-}
-
 
 footer {
     width: 100%;
@@ -178,65 +111,40 @@ footer p {
     line-height: 1.5rem;
     margin: auto;
 }
+ 
+@media screen and (max-width: 768px){
 
-
-/* <!-- UPLOAD BOARD --> */
-
-.container-upload {
-    margin-top: 2rem;
-    width: 90%;
-    align-items: center;
-    margin: auto;
-    border-radius: 10px;
+.about-del-top img {
+    width: 70%;
 }
 
-.upload-top {
-    display: flex;
-    margin-top: 1.8rem;
-    padding: 1rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: white;
-    align-items: center;
-
+.about-del {
+    flex-direction: column;
 }
 
-.upload-top img {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 1rem;
+footer{
+    flex-direction: column;
+    padding: 4rem 0;
+}
 }
 
 
-.upload-bottom {
-    width: 100%;
-    display: inline-flex;
-    border-top: 2px solid #F5F6FA;
-    margin: 1, 8rem;
-    height: 4.5rem;
-    background-color: #fff;
+
+@media (prefers-color-scheme: dark){
+    body{
+        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    }
+
+    .about-del p{
+        color: #fff;
+    }
+
+    footer{
+        background: linear-gradient(rgb(20, 20, 78),rgb(28, 59, 71));
+    }
+    .copyright p{
+        color: #fff;
+    }
 }
 
-input {
-    padding: 1rem;
-    width: 80%;
-    border: none;
-    font-size: 1rem;
-    outline: none;
-}
 
-.upload-top h3 {
-    color: rgb(54, 54, 206);
-    font-size: 1.1rem;
-    font-weight: 500;
-
-}
-
-.upload-bottom h2 {
-    color: rgb(54, 54, 206);
-    align-items: end;
-    cursor: pointer;
-    margin: auto;
-    justify-content: end;
-    font-size: 1.1rem;
-}
