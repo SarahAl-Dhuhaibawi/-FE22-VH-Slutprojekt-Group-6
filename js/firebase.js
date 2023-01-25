@@ -30,13 +30,13 @@ const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
 const db = getDatabase();
 var urlRootRef = ref(db, "/");
-const MAX_IMAGES= 13
+const MAX_IMAGES = 13
 let container = document.getElementsByClassName("comments-container")[0];
 function createCard(user, text) {
     container.innerHTML += `
 <div class="card">
 <div class="card-img">
-    <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random()*MAX_IMAGES)]}');"></div>
+    <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
 </div>
 <div class="comments-text">
     <h4>${user}</h4>
@@ -49,7 +49,7 @@ function createCard(user, text) {
 let arrayWithPicURL = [];
 function getfiles() {
     for (let index = 1; index <= MAX_IMAGES; index++) {
-        arrayWithPicURL.push("index.html/../images/profile/" + index.toString().padStart(3,"0")+".png");
+        arrayWithPicURL.push("index.html/../images/profile/" + index.toString().padStart(3, "0") + ".png");
     }
     console.log(arrayWithPicURL);
 }
@@ -74,18 +74,17 @@ onValue(urlRootRef, (snapshot) => {
 
 
 let input = document.getElementById("input")
-document.getElementsByClassName("upload-bottom")[0].addEventListener("click",(event)=>
-{
+document.getElementsByClassName("upload-bottom")[0].addEventListener("click", (event) => {
 
-        let adressRef = ref(db, "/");
-        push(adressRef, {
-            username: "username",
-            dateOfCretion: new Date().toString("yyyy-MM-dd hh:mm:ss"),
-            message: input.value,
-            x: 0,
-            y: 0,
-        });
-   
-input.value="" //clear text input
+    let adressRef = ref(db, "/");
+    push(adressRef, {
+        username: "username",
+        dateOfCretion: new Date().toString("yyyy-MM-dd hh:mm:ss"),
+        message: input.value,
+        x: 0,
+        y: 0,
+    });
+
+    input.value = "" //clear text input
 });
 
