@@ -32,17 +32,18 @@ const db = getDatabase();
 var urlRootRef = ref(db, "/");
 const MAX_IMAGES = 13
 let container = document.getElementsByClassName("comments-container")[0];
+
 function createCard(user, text) {
     container.innerHTML += `
-<div class="card">
-<div class="card-img">
-    <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
-</div>
-<div class="comments-text">
-    <h4>${user}</h4>
-    <p>${text}</p>
-</div>
-</div>
+    <div class="card">
+    <div class="card-img">
+        <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
+    </div>
+    <div class="comments-text">
+        <h4>${user}</h4>
+        <p>${text}</p>
+    </div>
+    </div>
 `;
 }
 
@@ -73,8 +74,9 @@ onValue(urlRootRef, (snapshot) => {
 });
 
 
-let input = document.getElementById("input")
-document.getElementsByClassName("upload-bottom")[0].addEventListener("click", (event) => {
+let input = document.getElementById("input");
+
+document.querySelector(".upload-bottom h2").addEventListener("click", (event) => {
 
     let adressRef = ref(db, "/");
     push(adressRef, {
