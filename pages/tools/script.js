@@ -15,7 +15,7 @@ const searchButton = document.querySelector('.searchButton');
 
 function stopGame() {
 
-    showPopUpWithText('Please, click here to try it again!');
+    showPopUpWithText('The rocket is fired!');
     playSound(bugSound);
 }
 
@@ -44,7 +44,7 @@ popUpRefresh.addEventListener('click', (e) => {
 
 
 function workPopUp() {
-stopGame()
+    stopGame()
 
 }
 
