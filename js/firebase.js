@@ -90,3 +90,45 @@ document.querySelector(".upload-bottom h2").addEventListener("click", (event) =>
     input.value = "" //clear text input
 });
 
+//Search functions, display in a container and show the total hits of matching word
+onValue(urlRootRef, (snapshot) => {
+    const searchInput = document.querySelector('#search-input');
+    const searchBtn = document.querySelector('#search-btn');
+    const searchErrorText = document.querySelector('.search-error-text');
+    const searchResultsContainer = document.querySelector('#search-results-container');
+    const searchResultCount = document.querySelector('#search-result-count');
+
+    searchBtn.addEventListener('click', searchMessages);
+
+    function searchMessages() {
+        const searchQuery = searchInput.value.toLowerCase();
+        if (searchInput.value <= 0) {
+            searchResultsContainer.innerHTML = '';
+            searchResultCount.innerText = ``;
+            searchErrorText.innerText = 'No inputs';
+        }
+        else {
+            const filteredMessages = [];
+            snapshot.forEach(childSnapshot => {
+                if (childSnapshot.val().message.toLowerCase().includes(searchQuery.toLowerCase()))
+                    filteredMessages.push(childSnapshot);
+            });
+
+            searchResultsContainer.innerHTML = '';
+
+            //Here add class or id to style the messages
+            filteredMessages.forEach(function (childSnapshot) {
+                const childData = childSnapshot.val();
+                const messageDiv = document.createElement('div');
+                messageDiv.innerText = childData.username + ": " + childData.message;
+                messageDiv.style.backgroundColor = childData.color;
+                messageDiv.classList.add("messageCard");
+                searchResultsContainer.appendChild(messageDiv);
+            });
+
+            searchResultCount.innerText = `${filteredMessages.length} matching results`;
+            searchInput.value = '';
+            searchErrorText.innerText = '';
+        }
+    }
+});
