@@ -372,6 +372,10 @@ input {
         height: auto;
     }
 
+    #counter {
+        display: none;
+    }
+
     .card {
         width: 100%;
     }
