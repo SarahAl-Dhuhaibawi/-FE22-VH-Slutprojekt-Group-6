@@ -39,3 +39,20 @@ var typewriter = new Typewriter(null, {
 typewriter
   .typeString("What's on your mind?")
   .start();
+
+// Har ett max-input på message och räknar tecken
+let messageInput = document.getElementById("input");
+let counter = document.getElementById("counter");
+
+counter.innerText = "Characters remaining: 100";
+
+messageInput.addEventListener("input", function () {
+    let messageLength = messageInput.value.length;
+
+    counter.innerText = "Characters remaining: " + (100 - messageLength);
+
+    if (messageLength > 100) {
+        messageInput.value = messageInput.value.substring(0, 100);
+        counter.innerText = "Characters remaining: 0";
+    }
+});
