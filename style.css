@@ -156,6 +156,7 @@ footer .social-icon li a:hover {
     display: flex;
     text-align: center;
     align-items: center;
+    
 }
 
 footer p {
@@ -215,11 +216,11 @@ input {
 
 }
 
-.upload-top h3 {
+.upload-top h3:hover{
     color: rgb(54, 54, 206);
     font-size: 1.1rem;
     font-weight: 500;
-
+    font-size: 1.2rem;
 }
 
 .upload-bottom h2 {
