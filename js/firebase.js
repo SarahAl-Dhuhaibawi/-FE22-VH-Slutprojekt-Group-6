@@ -133,3 +133,11 @@ onValue(urlRootRef, (snapshot) => {
         }
     }
 });
+
+document.getElementById("delete-btn").addEventListener(
+    "click", (event) => {
+        remove(ref(db, '/')).then(() => {
+
+        })
+
+    });
