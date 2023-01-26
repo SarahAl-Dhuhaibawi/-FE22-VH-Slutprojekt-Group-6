@@ -274,6 +274,11 @@ input {
     font-size: .8rem;
 }
 
+#counter{
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
+
 
 @media screen and (max-width: 768px) {
     .comments-container {
