@@ -19,6 +19,10 @@ ul {
     list-style: none;
 }
 
+.container {
+    min-height: 100vh;
+}
+
 
 .about-del-top {
     position: relative;
@@ -162,7 +166,8 @@ footer .social-icon li a:hover {
 footer p {
     font-size: .7rem;
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 3.8rem;
+    color: #F5F6FA;
     margin: auto;
 }
 
@@ -252,19 +257,47 @@ input {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 90%;
-    justify-content: space-between;
+}
+
+.card.showAnimation {
+    display: flex;
+    border-radius: 18px;
+    min-width: 18%;
+    padding: .4rem 0;
+    align-items: center;
+    background-color: #fff;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    animation-name: animation;
+    animation-timing-function: ease-out;
+    animation-duration: .8s;
 }
 
 .card {
     display: flex;
     border-radius: 18px;
-    width: 32%;
+    min-width: 18%;
     padding: .4rem 0;
     align-items: center;
     background-color: #fff;
     gap: 1rem;
     padding: 1rem 1.5rem;
 }
+
+
+@keyframes animation {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
 
 .user-bild {
     background-image: url("./images/profile/001-viking.png");
@@ -380,9 +413,18 @@ input {
         width: 100%;
     }
 
+    footer p {
+        line-height: 1.8rem;
+    }
+
     #search-results-container {
         flex-direction: column;
         height: auto;
+    }
+
+    .card {
+        word-break: break-all;
+        margin: 0 !important;
     }
 
 
@@ -395,6 +437,17 @@ input {
         padding: 4rem 0;
     }
 
+}
+
+#delete-btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin: 1rem 0;
+    float: right;
+    cursor: pointer;
+    background: rgb(234 92 95);
+    color: #fff;
 }
 
 @media screen and (min-width: 768px) and (max-width: 905px) {

@@ -108,8 +108,9 @@ footer .social-icon li a:hover {
 footer p {
     font-size: .7rem;
     font-weight: 500;
-    line-height: 1.5rem;
     margin: auto;
+    line-height: 3.8rem;
+    color: #F5F6FA;
 }
 
 @media screen and (max-width: 768px) {
@@ -122,10 +123,23 @@ footer p {
         flex-direction: column;
     }
 
+    .main-container {
+        margin-top: 3rem;
+    }
+
+    h1 {
+        margin-top: 2rem;
+    }
+
     footer {
         flex-direction: column;
         padding: 4rem 0;
     }
+
+    footer p {
+        line-height: 1.8rem;
+    }
+
 }
 
 

@@ -35,8 +35,13 @@ const MAX_IMAGES = 13
 let container = document.getElementsByClassName("comments-container")[0];
 
 function createCard(user, text) {
+    if (document.querySelector('.card')) {
+        document.querySelectorAll('.card').forEach((el) => {
+            el.classList.remove('showAnimation');
+        })
+    }
     container.innerHTML += `
-    <div class="card">
+    <div class="card showAnimation" style="margin: 0rem ${Math.floor(Math.random() * 2.5)}rem">
     <div class="card-img">
         <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
     </div>
@@ -46,14 +51,15 @@ function createCard(user, text) {
     </div>
     </div>
 `;
+
 }
+
 
 let arrayWithPicURL = [];
 function getfiles() {
     for (let index = 1; index <= MAX_IMAGES; index++) {
         arrayWithPicURL.push("index.html/../images/profile/" + index.toString().padStart(3, "0") + ".png");
     }
-    console.log(arrayWithPicURL);
 }
 getfiles();
 
@@ -81,7 +87,7 @@ document.querySelector(".upload-bottom h2").addEventListener("click", (event) =>
 
     let adressRef = ref(db, "/");
     push(adressRef, {
-        username: "username",
+        username: "Anonymous",
         dateOfCretion: new Date().toString("yyyy-MM-dd hh:mm:ss"),
         message: input.value,
         x: 0,
