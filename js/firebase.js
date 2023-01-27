@@ -25,6 +25,7 @@ const firebaseConfig = {
     appId: "1:632318648569:web:60f9813437fa829e598228",
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 //const analytics = getAnalytics(app);
@@ -32,26 +33,33 @@ const db = getDatabase();
 var urlRootRef = ref(db, "/");
 const MAX_IMAGES = 13
 let container = document.getElementsByClassName("comments-container")[0];
+
 function createCard(user, text) {
+    if (document.querySelector('.card')) {
+        document.querySelectorAll('.card').forEach((el) => {
+            el.classList.remove('showAnimation');
+        })
+    }
     container.innerHTML += `
-<div class="card">
-<div class="card-img">
-    <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
-</div>
-<div class="comments-text">
-    <h4>${user}</h4>
-    <p>${text}</p>
-</div>
-</div>
+    <div class="card showAnimation" style="margin: 0rem ${Math.floor(Math.random() * 2.5)}rem">
+    <div class="card-img">
+        <div class="user-bild" style="background-image: url('${arrayWithPicURL[Math.floor(Math.random() * MAX_IMAGES)]}');"></div>
+    </div>
+    <div class="comments-text">
+        <h4>${user}</h4>
+        <p>${text}</p>
+    </div>
+    </div>
 `;
+
 }
+
 
 let arrayWithPicURL = [];
 function getfiles() {
     for (let index = 1; index <= MAX_IMAGES; index++) {
         arrayWithPicURL.push("index.html/../images/profile/" + index.toString().padStart(3, "0") + ".png");
     }
-    console.log(arrayWithPicURL);
 }
 getfiles();
 
@@ -73,12 +81,13 @@ onValue(urlRootRef, (snapshot) => {
 });
 
 
-let input = document.getElementById("input")
-document.getElementsByClassName("upload-bottom")[0].addEventListener("click", (event) => {
+let input = document.getElementById("input");
+
+document.querySelector(".upload-bottom h2").addEventListener("click", (event) => {
 
     let adressRef = ref(db, "/");
     push(adressRef, {
-        username: "username",
+        username: "Anonymous",
         dateOfCretion: new Date().toString("yyyy-MM-dd hh:mm:ss"),
         message: input.value,
         x: 0,
@@ -88,3 +97,53 @@ document.getElementsByClassName("upload-bottom")[0].addEventListener("click", (e
     input.value = "" //clear text input
 });
 
+//Search functions, display in a container and show the total hits of matching word
+onValue(urlRootRef, (snapshot) => {
+    const searchInput = document.querySelector('#search-input');
+    const searchBtn = document.querySelector('#search-btn');
+    const searchErrorText = document.querySelector('.search-error-text');
+    const searchResultsContainer = document.querySelector('#search-results-container');
+    const searchResultCount = document.querySelector('#search-result-count');
+
+    searchBtn.addEventListener('click', searchMessages);
+
+    function searchMessages() {
+        const searchQuery = searchInput.value.toLowerCase();
+        if (searchInput.value <= 0) {
+            searchResultsContainer.innerHTML = '';
+            searchResultCount.innerText = ``;
+            searchErrorText.innerText = 'No inputs';
+        }
+        else {
+            const filteredMessages = [];
+            snapshot.forEach(childSnapshot => {
+                if (childSnapshot.val().message.toLowerCase().includes(searchQuery.toLowerCase()))
+                    filteredMessages.push(childSnapshot);
+            });
+
+            searchResultsContainer.innerHTML = '';
+
+            //Here add class or id to style the messages
+            filteredMessages.forEach(function (childSnapshot) {
+                const childData = childSnapshot.val();
+                const messageDiv = document.createElement('div');
+                messageDiv.innerText = childData.username + ": " + childData.message;
+                messageDiv.style.backgroundColor = childData.color;
+                messageDiv.classList.add("messageCard");
+                searchResultsContainer.appendChild(messageDiv);
+            });
+
+            searchResultCount.innerText = `${filteredMessages.length} matching results`;
+            searchInput.value = '';
+            searchErrorText.innerText = '';
+        }
+    }
+});
+
+document.getElementById("delete-btn").addEventListener(
+    "click", (event) => {
+        remove(ref(db, '/')).then(() => {
+
+        })
+
+    });

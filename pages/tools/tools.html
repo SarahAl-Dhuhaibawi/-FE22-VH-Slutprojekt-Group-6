@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="lib/anime.min.js" defer></script>
+    <title>sound & pop-up</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon/pen-icon.webp">
+    <script src="https://kit.fontawesome.com/1ea8f7f076.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../tools/style.css">
+    <script src="../tools/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/1ea8f7f076.js" crossorigin="anonymous"></script>
+
+</head>
+<div>
+    <nav class="navbar">
+        <a class="navbar-link" href="../../index.html"><img src="../../images/icons/logo.svg" /></a>
+        <div class="navbar-items">
+            <ul class="link-list">
+                <li class="link-item"><a href="../../index.html">Home</a></li>
+                <li class="link-item"><a href="../aboutUs/aboutUs.html">About Us</a></li>
+                <li class="link-item"><a href="../tools/tools.html">Random Tools</a></li>
+            </ul>
+            <div class="contact-us">
+                <a href="../contactUs/contactUs.html" style="color: #fff">Contact Us</a>
+            </div>
+        </div>
+        <div class="toggle-icon">
+            <img class="open-icon show" src="../../images/icons/hamburger-icon.png" alt="hamburger">
+            <img class="close-icon" src="../../images/icons/close-icon.png" alt="close">
+        </div>
+    </nav>
+    <!-- SEARCH FEATURE -->
+    <div class="search-box">
+        <div class="search-top">
+            <h3>Search keyword</h3>
+        </div>
+        <div class="search-bottom">
+            <input type="text" id="search-input" placeholder="Search messages">
+            <h2 id="search-btn">SEARCH</h2>
+        </div>
+        <p id="search-result-count"></p>
+        <p class="search-error-text"></p>
+    </div>
+    <div id="search-results-container"></div>
+
+
+    <button class='searchButton'>
+        <i class="fa-solid fa-rocket"></i>
+    </button>
+
+</div>
+
+
+
+
+
+<section class="pop-up pop-up-hide">
+    <button class="pop-up_refresh"><i class="fa-solid fa-rotate"></i></button>
+    <span class="pop-up_message">Hello! Do It Again!!</span>
+</section>
+
+<script src="../../js/toggleMenu.js"></script>
+
+</body>
+
+</html>

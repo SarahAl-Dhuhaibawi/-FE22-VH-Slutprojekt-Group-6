@@ -31,6 +31,7 @@ ul {
 }
 
 .navbar .link-list {
+    text-align: left;
     display: flex;
     gap: 3rem;
     text-transform: uppercase;
@@ -218,8 +219,9 @@ footer .social-icon li a:hover {
 footer p {
     font-size: .7rem;
     font-weight: 500;
-    line-height: 1.5rem;
     margin: auto;
+    line-height: 3.8rem;
+    color: #F5F6FA;
 }
 
 
@@ -236,6 +238,11 @@ footer p {
         flex-direction: column;
         padding: 4rem 0;
     }
+
+    footer p {
+        line-height: 1.8rem;
+    }
+
 
 }
 

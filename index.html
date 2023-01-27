@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./css/header-navbar.css">
     <script src="js/firebase.js" defer type="module"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>Viking Comment Board App</title>
 </head>
 
@@ -24,12 +25,10 @@
                     <ul class="link-list">
                         <li class="link-item"><a href="index.html">Home</a></li>
                         <li class="link-item"><a href="./pages/aboutUs/aboutUs.html">About Us</a></li>
+                        <li class="link-item"><a href="./pages/tools/tools.html">Random Tools</a></li>
                     </ul>
                     <div class="contact-us">
                         <a href="./pages/contactUs/contactUs.html" style="color: #fff">Contact Us</a>
-                    </div>
-                    <div class="profilbild">
-                        <img src="./images/profile/001.png" alt="">
                     </div>
                 </div>
                 <div class="toggle-icon">
@@ -42,130 +41,15 @@
                 <div class="upload-top"> <img src="./images/icons/pen.svg" alt="">
                     <h3> Update Status </h3>
                 </div>
-                <div class="upload-bottom"> <input type="text" id="input" placeholder="What's on your mind?">
+                <div class="upload-bottom"> <input type="text" maxlength="100" id="input" placeholder="">
+                    <div id="counter"></div>
                     <h2>POST</h2>
                 </div>
+                <button id="delete-btn">Empty thread</button>
             </div>
+
             <!-- COMMENTS BOARD -->
             <div class="comments-container">
-                <!--  <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <div class="user-bild"></div>
-                    </div>
-                    <div class="comments-text">
-                        <h4>Svensson</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    </div>-->
             </div>
         </div>
         <footer>
